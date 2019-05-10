@@ -53,6 +53,7 @@ public class ClockMain extends Application {
 		timer.start();
 	}
 
+	//responsible for animation
 	public void update() {
 	theText.setText(LocalTime.now().toString());
 	}
