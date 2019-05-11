@@ -17,12 +17,20 @@ public class ClockMain extends Application {
 		launch(args);
 	}
 
+	
+	/**
+	 * sets up a TextField with the current time passed in as a String
+	 */
 	public void createTime() {
 		theText = new TextField();
 		theText.setText(LocalTime.now().toString());
 		GridPane.setConstraints(theText, 12, 5);
 	}
 
+	/**
+	 * responsible for setting the window up and initializing the AnimationTimer
+	 */
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		GridPane root = new GridPane();
@@ -53,7 +61,9 @@ public class ClockMain extends Application {
 		timer.start();
 	}
 
-	//responsible for animation
+	/**
+	 * responsible for animation
+	 */
 	public void update() {
 	theText.setText(LocalTime.now().toString());
 	}
